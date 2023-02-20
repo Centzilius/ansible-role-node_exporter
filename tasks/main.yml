@@ -62,7 +62,8 @@
 
 - name: Verify node_exporter is responding to requests.
   uri:
-    url: "http://{% if node_exporter_host !='' %}{{ node_exporter_host }}{% else %}localhost{% endif %}:{{ node_exporter_port }}/"
+    url: "{{ node_exporter_scheme }}://{% if node_exporter_host !='' %}{{ node_exporter_host }}{% else %}localhost{% endif %}:{{ node_exporter_port }}/"
+    validate_certs: false
     return_content: true
   register: metrics_output
   failed_when: "'Metrics' not in metrics_output.content"
