@@ -14,6 +14,11 @@ node_exporter_bin_path: /usr/local/bin/node_exporter
 # Set node_exporter_host to localhost if you wish to expose node_exporter on localhost only.
 node_exporter_host: ''
 node_exporter_port: 9100
+
+# Used only for check if node_exporter is responding. To enable TLS check out:
+# https://github.com/prometheus/exporter-toolkit/blob/a2411be0c677e1ed7d1d348456f47ffcf98e5607/docs/web-configuration.md
+node_exporter_scheme: 'http'
+
 node_exporter_options: ''
 
 node_exporter_state: started
