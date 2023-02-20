@@ -29,6 +29,10 @@ The architecture and download URL for Node exporter. If you're on a Raspberry Pi
 
 The path where the `node_exporter` binary will be installed.
 
+    node_exporter_user_additional_groups: ''
+
+A list of additional groups to add the node_exporter executing user to.
+
     node_exporter_host: 'localhost'
     node_exporter_port: 9100
 
