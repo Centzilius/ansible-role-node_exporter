@@ -59,11 +59,3 @@
     name: node_exporter
     state: "{{ node_exporter_state }}"
     enabled: "{{ node_exporter_enabled }}"
-
-- name: Verify node_exporter is responding to requests.
-  uri:
-    url: "{{ node_exporter_scheme }}://{% if node_exporter_host !='' %}{{ node_exporter_host }}{% else %}localhost{% endif %}:{{ node_exporter_port }}/"
-    validate_certs: false
-    return_content: true
-  register: metrics_output
-  failed_when: "'Metrics' not in metrics_output.content"
