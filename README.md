@@ -43,6 +43,11 @@ Any additional options to pass to `node_exporter` when it starts, e.g. `--no-col
 
 Controls for the `node_exporter` service.
 
+    node_exporter_options: '--web.config.path=/etc/example.conf'
+    node_exporter_scheme: 'https'
+
+Example values that you can use if you want to use TLS. See also [the exporter-toolkit documentation on the topic](https://github.com/prometheus/exporter-toolkit/blob/a2411be0c677e1ed7d1d348456f47ffcf98e5607/docs/web-configuration.md).
+
 ## Dependencies
 
 None.
