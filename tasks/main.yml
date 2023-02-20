@@ -37,6 +37,7 @@
   user:
     name: node_exporter
     shell: /sbin/nologin
+    groups: "{{ node_exporter_user_additional_groups }}"
     state: present
 
 - name: Copy the node_exporter systemd unit file.
